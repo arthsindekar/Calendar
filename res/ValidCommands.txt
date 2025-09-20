@@ -1,0 +1,29 @@
+create calendar --name Cal1 --timezone UTC
+use calendar --name Cal1
+create event --autoDecline "Meeting One" from 2025-03-05T02:30 to 2025-03-05T03:30
+create event --autoDecline Meeting1 from 2025-03-05T02:30 to 2025-03-05T03:30 repeats MSF for 8 times
+create event Meeting2 from 2025-03-05T04:30 to 2025-03-05T08:30 repeats MSF until 2025-03-08
+create event Meeting3 on 2025-03-02T02:30
+create event Meeting4 on 2025-04-05 repeats MSF for 8 times
+create event Meeting4 from 2025-04-06T02:30 to 2025-04-06T03:30
+create event Meeting5 on 2025-05-05 repeats MSF until 2025-05-08
+edit event description "Meeting One" from 2025-03-05T02:30 to 2025-03-05T03:30 with PDPLecture
+edit events location Meeting4 from 2025-04-04T02:30 with Boston
+edit events subject Meeting2 "Meeting two"
+print events on 2025-03-05
+print events from 2025-02-05T02:30 to 2025-06-05T02:30
+show status on 2025-03-05T03:00
+export cal cal.csv
+edit calendar --name Cal1 --property name AsiaCalendar
+edit calendar --name AsiaCalendar --property timezone Asia/Kolkata
+print events from 2025-02-05T02:30 to 2025-06-05T02:30
+create calendar --name USCalendar --timezone America/New_York
+copy event Meeting1 on 2025-03-10T08:00 --target USCalendar to 2025-04-10T01:00
+copy events on 2025-03-07 --target USCalendar to 2025-03-04
+copy events between 2025-04-04 and 2025-04-22 --target USCalendar to 2025-04-15
+use calendar --name USCalendar
+print events from 2025-02-05T02:30 to 2025-06-05T02:30
+exit
+
+copy event "Meeting One" on 2025-03-10T08:00 --target USCalendar to 2025-04-10T01:00
+copy event "Meeting One" on 2025-03-05T02:30 --target Cal2 to 2025-04-10T01:00

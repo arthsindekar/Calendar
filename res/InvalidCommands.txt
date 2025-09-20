@@ -1,0 +1,8 @@
+ creat event --autoDecline "Meeting One" from 2025-03-05T02:30 to 2025-03-05T03:30\
+create event --autoDecline Meeting1 from 2025-03-05T02:30 to 2025-03-05T03:30 repeats MSF for 8 times\
+create event Meeting1 from 2025-03-05T02:30 to 2025-03-05T03:30 repeats MSF until 2025-03-08\
+create event --autoDecline Meeting1  on 2025-03-05T02:30\
+create event Meeting1 on 2025-03-05 repeats MSF for 8 times\
+create event Meeting1 on 2025-03-05 repeats MSF until 2025-03-08\
+export cal cal.csv\
+exit}

@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+
+
+<h1>UseCalendarCommand.java</h1>
+
+<table class="src">
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1de7c0ad_1'/>
+1
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1de7c0ad_1'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>package controller;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1de7c0ad_2'/>
+2
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1de7c0ad_2'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1de7c0ad_3'/>
+3
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1de7c0ad_3'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import java.util.List;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1de7c0ad_4'/>
+4
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1de7c0ad_4'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1de7c0ad_5'/>
+5
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1de7c0ad_5'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import model.ICalendar;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1de7c0ad_6'/>
+6
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1de7c0ad_6'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import view.ICalendarView;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1de7c0ad_7'/>
+7
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1de7c0ad_7'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1de7c0ad_8'/>
+8
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1de7c0ad_8'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>/**</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1de7c0ad_9'/>
+9
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1de7c0ad_9'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * The {@code UseCalendarCommand} class represents a command to switch to a specified calendar</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1de7c0ad_10'/>
+10
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1de7c0ad_10'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * within a calendar management system. It validates user input, checks for calendar availability,</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1de7c0ad_11'/>
+11
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1de7c0ad_11'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * and updates the current calendar in the system.</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1de7c0ad_12'/>
+12
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1de7c0ad_12'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> */</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1de7c0ad_13'/>
+13
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1de7c0ad_13'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>public class UseCalendarCommand extends Command {</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1de7c0ad_14'/>
+14
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1de7c0ad_14'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1de7c0ad_15'/>
+15
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1de7c0ad_15'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1de7c0ad_16'/>
+16
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1de7c0ad_16'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  UseCalendarCommand(CalendarData calendarData) {</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1de7c0ad_17'/>
+17
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1de7c0ad_17'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    super(calendarData);</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1de7c0ad_18'/>
+18
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1de7c0ad_18'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>  }</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1de7c0ad_19'/>
+19
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1de7c0ad_19'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1de7c0ad_20'/>
+20
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1de7c0ad_20'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  /**</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1de7c0ad_21'/>
+21
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1de7c0ad_21'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>   * Executes the command to switch to a specific calendar.</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1de7c0ad_22'/>
+22
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1de7c0ad_22'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>   * The command expects a list of tokens following the format:</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1de7c0ad_23'/>
+23
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1de7c0ad_23'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>   * {@code use calendar --name &#60;calendarName&#62;}.</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1de7c0ad_24'/>
+24
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1de7c0ad_24'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>   *</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1de7c0ad_25'/>
+25
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1de7c0ad_25'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>   * @param calendar      The current calendar instance. This is not used in the implementation.</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1de7c0ad_26'/>
+26
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1de7c0ad_26'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>   * @param calendarView  The view component for displaying calendar-related data.</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1de7c0ad_27'/>
+27
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1de7c0ad_27'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>   * @param tokens        The list of command tokens provided by the user.</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1de7c0ad_28'/>
+28
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1de7c0ad_28'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>   * @throws IllegalArgumentException if the command format is incorrect or the calendar is</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1de7c0ad_29'/>
+29
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1de7c0ad_29'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>   *                                  unavailable.</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1de7c0ad_30'/>
+30
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1de7c0ad_30'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>   */</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1de7c0ad_31'/>
+31
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1de7c0ad_31'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  @Override</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1de7c0ad_32'/>
+32
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1de7c0ad_32'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  void execute(ICalendar calendar, ICalendarView calendarView, List&#60;String&#62; tokens)</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1de7c0ad_33'/>
+33
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1de7c0ad_33'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>          throws IllegalArgumentException {</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1de7c0ad_34'/>
+34
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1de7c0ad_34'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    String calendarName;</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1de7c0ad_35'/>
+35
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1de7c0ad_35'>1</a>
+<span>
+1. execute : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>    if (tokens.size() == 4) {</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1de7c0ad_36'/>
+36
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1de7c0ad_36'>1</a>
+<span>
+1. execute : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>      if (tokens.get(1).equals(&#34;calendar&#34;)) {</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1de7c0ad_37'/>
+37
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1de7c0ad_37'>1</a>
+<span>
+1. execute : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        if (tokens.get(2).equals(&#34;--name&#34;)) {</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1de7c0ad_38'/>
+38
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1de7c0ad_38'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>          calendarName = tokens.get(3);</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1de7c0ad_39'/>
+39
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1de7c0ad_39'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>        }</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1de7c0ad_40'/>
+40
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1de7c0ad_40'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>        else {</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1de7c0ad_41'/>
+41
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1de7c0ad_41'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>          throw new IllegalArgumentException(&#34;Invalid command. Expected --name&#34;);</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1de7c0ad_42'/>
+42
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1de7c0ad_42'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>        }</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1de7c0ad_43'/>
+43
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1de7c0ad_43'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>      }</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1de7c0ad_44'/>
+44
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1de7c0ad_44'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>      else {</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1de7c0ad_45'/>
+45
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1de7c0ad_45'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        throw new IllegalArgumentException(&#34;Invalid command. Expected calendar.&#34;);</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1de7c0ad_46'/>
+46
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1de7c0ad_46'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>      }</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1de7c0ad_47'/>
+47
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1de7c0ad_47'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1de7c0ad_48'/>
+48
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1de7c0ad_48'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    else {</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1de7c0ad_49'/>
+49
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1de7c0ad_49'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>      throw new IllegalArgumentException(&#34;Invalid Arguments.&#34;);</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1de7c0ad_50'/>
+50
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1de7c0ad_50'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1de7c0ad_51'/>
+51
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1de7c0ad_51'>1</a>
+<span>
+1. execute : removed call to controller/UseCalendarCommand::useCurrentCalendar &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>    useCurrentCalendar(calendarName);</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1de7c0ad_52'/>
+52
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1de7c0ad_52'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>  }</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1de7c0ad_53'/>
+53
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1de7c0ad_53'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1de7c0ad_54'/>
+54
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1de7c0ad_54'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>}</span></pre></td></tr>
+
+
+
+<tr><td></td><td></td><td><h2>Mutations</h2></td></tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@1de7c0ad_35'>35</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@1de7c0ad_35'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>execute<br/><b>Killed by : </b>IntegrationTests.testForInteractiveIncompleteArgumentsUse(IntegrationTests)</span></span> negated conditional &rarr; KILLED</span>
+</div> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@1de7c0ad_36'>36</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@1de7c0ad_36'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>execute<br/><b>Killed by : </b>UseCalendarCommandTest.testUseCalendarCalendarNotExist(UseCalendarCommandTest)</span></span> negated conditional &rarr; KILLED</span>
+</div> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@1de7c0ad_37'>37</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@1de7c0ad_37'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>execute<br/><b>Killed by : </b>UseCalendarCommandTest.testUseCalendarCalendarNotExist(UseCalendarCommandTest)</span></span> negated conditional &rarr; KILLED</span>
+</div> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@1de7c0ad_51'>51</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@1de7c0ad_51'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>execute<br/><b>Killed by : </b>UseCalendarCommandTest.testUseCalendarCalendarNotExist(UseCalendarCommandTest)</span></span> removed call to controller/UseCalendarCommand::useCurrentCalendar &rarr; KILLED</span>
+</div> 
+</td>
+</tr>
+
+</table>
+
+
+<h2>Active mutators</h2>
+<ul>
+<li class='mutator'>CONDITIONALS_BOUNDARY</li>
+<li class='mutator'>EMPTY_RETURNS</li>
+<li class='mutator'>FALSE_RETURNS</li>
+<li class='mutator'>INCREMENTS</li>
+<li class='mutator'>INVERT_NEGS</li>
+<li class='mutator'>MATH</li>
+<li class='mutator'>NEGATE_CONDITIONALS</li>
+<li class='mutator'>NULL_RETURNS</li>
+<li class='mutator'>PRIMITIVE_RETURNS</li>
+<li class='mutator'>TRUE_RETURNS</li>
+<li class='mutator'>VOID_METHOD_CALLS</li>
+
+</ul>
+
+<h2>Tests examined</h2>
+<ul>
+<li>IntegrationTests.testForInteractiveIncompleteArgumentsUse(IntegrationTests) (0 ms)</li><li>UseCalendarCommandTest.testUseCalendarCalendarNotExist(UseCalendarCommandTest) (0 ms)</li><li>UseCalendarCommandTest.testUseCalendarCommandFailure2(UseCalendarCommandTest) (0 ms)</li><li>UseCalendarCommandTest.testUseCalendarCommandFailure(UseCalendarCommandTest) (0 ms)</li><li>CalendarControllerTest.testCalendarControllerExitCommand(CalendarControllerTest) (0 ms)</li><li>CalendarControllerTest.testCalendarControllerInvalidKeyword(CalendarControllerTest) (0 ms)</li><li>UseCalendarCommandTest.testUseCalendarCommandSuccess(UseCalendarCommandTest) (0 ms)</li><li>CalendarControllerTest.testCalendarControllerNoCommand(CalendarControllerTest) (0 ms)</li><li>CalendarControllerTest.testExportEventCommandIncompleteCommand(CalendarControllerTest) (0 ms)</li><li>CalendarControllerTest.showStatusFailIncompleteArgs(CalendarControllerTest) (0 ms)</li><li>CalendarControllerTest.testExportEventCommandFileNameNotEndWithCSV(CalendarControllerTest) (0 ms)</li><li>CalendarControllerTest.testCalendarControllerPrintEventWrongSecondKeyword(CalendarControllerTest) (0 ms)</li><li>CalendarControllerTest.showStatusFailStatusNotEntered(CalendarControllerTest) (0 ms)</li><li>CalendarControllerTest.showStatusFailTimeNotEntered(CalendarControllerTest) (0 ms)</li><li>IntegrationTests.testForInteractiveModeUseCalendar(IntegrationTests) (0 ms)</li><li>CalendarControllerTest.testCalendarControllerPrintEventNoArguments(CalendarControllerTest) (0 ms)</li><li>CalendarControllerTest.showStatusFailOnNotEntered(CalendarControllerTest) (0 ms)</li><li>CalendarControllerTest.testExportEventCommandExpectedKeywordCal(CalendarControllerTest) (0 ms)</li><li>IntegrationTests.testForInteractiveModeUseCalendarSuccess(IntegrationTests) (0 ms)</li><li>CalendarControllerTest.testCalendarControllerPrintEventRepeatedAArgument(CalendarControllerTest) (0 ms)</li><li>CalendarControllerTest.showStatusSuccess(CalendarControllerTest) (1 ms)</li><li>CalendarControllerTest.testCalendarControllerPrintEventsNoValueMentionedForArgument(CalendarControllerTest) (0 ms)</li><li>CalendarControllerTest.testCalendarControllerPrintEventNoArguments2(CalendarControllerTest) (0 ms)</li><li>CalendarControllerTest.testCalendarControllerCreateEventIncompleteCommandNoArgumentsAfterEvent(CalendarControllerTest) (0 ms)</li><li>CalendarControllerTest.testCalendarControllerPrintEventWrongCommandArgumentName(CalendarControllerTest) (0 ms)</li><li>IntegrationTests.testForInteractiveEmptyEvents(IntegrationTests) (0 ms)</li><li>CalendarControllerTest.testCalendarControllerEditEventIncompleteArguments(CalendarControllerTest) (0 ms)</li><li>CalendarControllerTest.testExportEventCommandSuccess(CalendarControllerTest) (0 ms)</li><li>CalendarControllerTest.testCalendarControllerPrintEventBothOnAndFromToUsed(CalendarControllerTest) (0 ms)</li><li>CalendarControllerTest.testCalendarControllerCreateEventRepeatedAutoDecline2(CalendarControllerTest) (0 ms)</li><li>CalendarControllerTest.testCalendarControllerPrintEventWrongRange(CalendarControllerTest) (0 ms)</li><li>CalendarControllerTest.testCalendarControllerCreateEventRepeatedEventArgumentName(CalendarControllerTest) (0 ms)</li><li>CalendarControllerTest.testCalendarControllerCreateEventRepeatedEventArgumentName2(CalendarControllerTest) (0 ms)</li><li>CalendarControllerTest.testCalendarControllerCreateEventIncompleteCommandNoArgumentsAfterEvent2(CalendarControllerTest) (0 ms)</li><li>CalendarControllerTest.testCalendarControllerPrintEventTimeRangeWrongValues(CalendarControllerTest) (0 ms)</li><li>CalendarControllerTest.testCalendarControllerEditEventAndEditEventsInSameCommand(CalendarControllerTest) (0 ms)</li><li>CalendarControllerTest.testCalendarControllerPrintEventNoEventsFound(CalendarControllerTest) (0 ms)</li><li>CalendarControllerTest.testCalendarControllerPrintEventOnWrongDate(CalendarControllerTest) (0 ms)</li><li>CalendarControllerTest.testCalendarControllerCreateEventIncompleteNoForTimesUsed(CalendarControllerTest) (0 ms)</li><li>CalendarControllerTest.testCalendarControllerCreateEventWrongCommandArgumentName(CalendarControllerTest) (0 ms)</li><li>CalendarControllerTest.testCalendarControllerEditEventNoPropertyAndSubject(CalendarControllerTest) (0 ms)</li><li>IntegrationTests.testForInteractiveModeEditCalendarName(IntegrationTests) (0 ms)</li><li>CalendarControllerTest.testCalendarControllerEditEventWithArgumentMissing(CalendarControllerTest) (0 ms)</li><li>CalendarControllerTest.testCalendarControllerEditEventRepeatedWithArgumentValue(CalendarControllerTest) (0 ms)</li><li>CalendarControllerTest.testCalendarControllerEditEventIncompleteFromArgumentValue(CalendarControllerTest) (0 ms)</li><li>CalendarControllerTest.testCalendarControllerCreateEventRepeatedArgumentAutoDecline(CalendarControllerTest) (0 ms)</li><li>CalendarControllerTest.testCalendarControllerCreateEventMissingTimesKeywordInForArgument(CalendarControllerTest) (0 ms)</li><li>CalendarControllerTest.testCalendarControllerCreateEventRepeatedFromArgumentName(CalendarControllerTest) (0 ms)</li><li>CalendarControllerTest.testCalendarControllerEditEventWrongCommandArgumentName(CalendarControllerTest) (0 ms)</li><li>CalendarControllerTest.testCalendarControllerCreateEventIncompleteNoForArgumentValue(CalendarControllerTest) (1 ms)</li><li>CalendarControllerTest.testCalendarControllerCreateEventAutoDeclineInPlaceOfArgumentValue(CalendarControllerTest) (0 ms)</li><li>IntegrationTests.testForHeadlessError(IntegrationTests) (0 ms)</li><li>CalendarControllerTest.testCalendarControllerEditRecurringEventsToArgumentMentioned(CalendarControllerTest) (0 ms)</li><li>CalendarControllerTest.testCalendarControllerEditSingleEvent(CalendarControllerTest) (0 ms)</li><li>CalendarControllerTest.testCalendarControllerEditRecurringEventAfterSpecificStartDateTime(CalendarControllerTest) (0 ms)</li><li>CalendarControllerTest.testCalendarControllerCreateEventFromToAndOnUsed(CalendarControllerTest) (0 ms)</li><li>CalendarControllerTest.testCalendarControllerCreateEventNameNotMentioned(CalendarControllerTest) (0 ms)</li><li>CalendarControllerTest.testCalendarControllerMultipleCommandsHeadlessFirstFails(CalendarControllerTest) (0 ms)</li><li>CalendarControllerTest.testCalendarControllerCreateEventWrongToArgument(CalendarControllerTest) (0 ms)</li><li>CalendarControllerTest.testCalendarControllerEditEventsInvalidStartDateTime(CalendarControllerTest) (0 ms)</li><li>CalendarControllerTest.testCalendarControllerCreateSingleAllDayEvent(CalendarControllerTest) (0 ms)</li><li>CalendarControllerTest.testCalendarControllerCreateEventWrongOnArgument(CalendarControllerTest) (0 ms)</li><li>CalendarControllerTest.testCalendarControllerCreateRecurringEventWithSpecificEndDate(CalendarControllerTest) (0 ms)</li><li>CalendarControllerTest.testCalendarControllerCreateEventWithoutRepeatsWeekdaysUntilMentioned(CalendarControllerTest) (0 ms)</li><li>CalendarControllerTest.testCalendarControllerEditAllRecurringEvent(CalendarControllerTest) (1 ms)</li><li>CalendarControllerTest.testCalendarControllerCreateRecurringEventWithSpecificEndDateTime(CalendarControllerTest) (0 ms)</li><li>CalendarControllerTest.testCalendarControllerCreateSingleEvent(CalendarControllerTest) (0 ms)</li><li>CalendarControllerTest.testCalendarControllerCreateEventAutoDeclineInBetween(CalendarControllerTest) (0 ms)</li><li>IntegrationTests.testForHeadlessModePrintEmptyEvent(IntegrationTests) (0 ms)</li><li>CalendarControllerTest.testCalendarControllerCreateRecurringEventWithWrongSpecificEndDate(CalendarControllerTest) (0 ms)</li><li>IntegrationTests.testForInteractiveModePrintEmptyEvent(IntegrationTests) (0 ms)</li><li>CalendarControllerTest.testCalendarControllerCreateSingleAllDayEventOnDate(CalendarControllerTest) (0 ms)</li><li>CalendarControllerTest.testCalendarControllerEditEventInvalidStartDateTime(CalendarControllerTest) (1 ms)</li><li>CalendarControllerTest.testCalendarControllerCreateEventWithoutRepeatsWeekdaysForMentioned(CalendarControllerTest) (0 ms)</li><li>CalendarControllerTest.testCalendarControllerCreateRecurringEventWithOccurrences(CalendarControllerTest) (0 ms)</li><li>CalendarControllerTest.testCalendarControllerCreateRecurringEventWithStringOccurrences(CalendarControllerTest) (0 ms)</li><li>CopyEventCommandTest.testCalendarControllerCopyEventNoArguments(CopyEventCommandTest) (0 ms)</li><li>CalendarControllerTest.testCalendarControllerCreateEventDifferentArgumentOrder(CalendarControllerTest) (1 ms)</li><li>CalendarControllerTest.testCalendarControllerCreateRecurringEventBothOccurrencesAndSpecificEndDateTime(CalendarControllerTest) (0 ms)</li><li>CopyEventCommandTest.testCalendarControllerCopyEventNameNotMentioned(CopyEventCommandTest) (0 ms)</li><li>CalendarControllerTest.testCalendarControllerPrintEventLineBreakAtStart(CalendarControllerTest) (0 ms)</li><li>CopyEventCommandTest.testCalendarControllerCopyEventWrongCommandArgumentName(CopyEventCommandTest) (0 ms)</li><li>CalendarControllerTest.testCalendarControllerCreateRecurringEventNoSubjectWithOccurrences(CalendarControllerTest) (3 ms)</li><li>CopyEventCommandTest.testCalendarControllerCopyEventIncompleteArgumentValue(CopyEventCommandTest) (0 ms)</li><li>CalendarControllerTest.testCalendarControllerPrintEventLineBreakInSubject(CalendarControllerTest) (0 ms)</li><li>CalendarControllerTest.testCalendarControllerPrintEventTimeRange(CalendarControllerTest) (0 ms)</li><li>CalendarControllerTest.testCalendarControllerCreateRecurringEventNoSubjectWithSpecificEndDateTime(CalendarControllerTest) (4 ms)</li><li>CopyEventCommandTest.testCalendarControllerCopyEventRepeatedArgument(CopyEventCommandTest) (0 ms)</li><li>CopyEventCommandTest.testCalendarControllerCopyEventOnBetweenAndUsed(CopyEventCommandTest) (0 ms)</li><li>CalendarControllerTest.testCalendarControllerPrintEventOnDate(CalendarControllerTest) (0 ms)</li><li>CalendarControllerTest.showStatusFailDateNotEntered(CalendarControllerTest) (10 ms)</li><li>CalendarControllerTest.testCalendarControllerCreateEventIncompleteNoArgumentValue(CalendarControllerTest) (7 ms)</li><li>CopyEventCommandTest.testCalendarControllerCopyEventsWrongAndDateFormat(CopyEventCommandTest) (0 ms)</li><li>CopyEventCommandTest.testCalendarControllerCopyEventsWrongDateFormat(CopyEventCommandTest) (0 ms)</li><li>CalendarControllerTest.testCalendarControllerCreateEventAutoDeclineAtTheEnd(CalendarControllerTest) (5 ms)</li><li>CopyEventCommandTest.testCalendarControllerCopyEventsWrongBetweenDateFormat(CopyEventCommandTest) (0 ms)</li><li>CopyEventCommandTest.testCalendarControllerCopyEventWrongTargetDateTimeFormat(CopyEventCommandTest) (0 ms)</li><li>CopyEventCommandTest.testCalendarControllerCopyEventOnlyDateMentionedForSingleEvent(CopyEventCommandTest) (0 ms)</li><li>CopyEventCommandTest.testCalendarControllerCopyEventsDateTimeMentioned(CopyEventCommandTest) (0 ms)</li><li>CopyEventCommandTest.testCalendarControllerCopyEventsWrongTargetDateFormat(CopyEventCommandTest) (0 ms)</li><li>CopyEventCommandTest.testCalendarControllerCopyEventsTargetDateTimeProvided(CopyEventCommandTest) (0 ms)</li><li>IntegrationTests.testCalendarControllerCopyEventsBetweenDatesSameCalendarNoEvents(IntegrationTests) (0 ms)</li><li>CalendarControllerTest.testCalendarControllerMultipleCommandsInteractiveFirstFails(CalendarControllerTest) (0 ms)</li><li>IntegrationTests.testForHeadlessModeCreateSuccessfulEvent(IntegrationTests) (0 ms)</li><li>IntegrationTests.testForInteractiveModeCreateSuccessfulEvent(IntegrationTests) (0 ms)</li><li>CalendarControllerTest.testCalendarControllerMultipleCommandsInteractive(CalendarControllerTest) (0 ms)</li><li>CopyEventCommandTest.testCalendarControllerCopyEventWrongTargetCalendarName(CopyEventCommandTest) (0 ms)</li><li>CalendarControllerTest.testCalendarControllerMultipleCommandsHeadless(CalendarControllerTest) (1 ms)</li><li>CopyEventCommandTest.testCalendarControllerCopyEventToAStartDateTimePublic(CopyEventCommandTest) (0 ms)</li><li>CopyEventCommandTest.testCalendarControllerCopyEventToAStartDateTimeSameCalendar(CopyEventCommandTest) (0 ms)</li><li>CopyEventCommandTest.testCalendarControllerCopyEventToAStartDateTime(CopyEventCommandTest) (0 ms)</li><li>CopyEventCommandTest.testCalendarControllerCopyEventToAStartDateTimePrivate(CopyEventCommandTest) (0 ms)</li><li>CopyEventCommandTest.testCalendarControllerCopyEventsOnADateDifferentCalendar(CopyEventCommandTest) (0 ms)</li><li>CopyEventCommandTest.testCalendarControllerCopyEventsBetweenDatesDifferentCalendar(CopyEventCommandTest) (0 ms)</li><li>CopyEventCommandTest.testCalendarControllerCopyEventsOnADateSameCalendar(CopyEventCommandTest) (0 ms)</li><li>CopyEventCommandTest.testCalendarControllerCopyEventsBetweenDatesSameCalendar(CopyEventCommandTest) (0 ms)</li><li>IntegrationTests.testForInteractiveModeShowStatus(IntegrationTests) (0 ms)</li><li>IntegrationTests.testForHeadlessModeShowStatus(IntegrationTests) (0 ms)</li><li>IntegrationTests.testForHeadlessModeEditEvent(IntegrationTests) (0 ms)</li><li>IntegrationTests.testForInteractiveExportCheckData(IntegrationTests) (0 ms)</li><li>IntegrationTests.testForInteractiveModeEditEvent(IntegrationTests) (0 ms)</li><li>IntegrationTests.testForInteractiveExportAllDayEvents(IntegrationTests) (0 ms)</li><li>IntegrationTests.testForHeadlessModeExport(IntegrationTests) (0 ms)</li><li>IntegrationTests.testForInteractiveModePrintSingleEvent(IntegrationTests) (0 ms)</li><li>IntegrationTests.testForHeadlessModePrintSingleEvent(IntegrationTests) (0 ms)</li><li>IntegrationTests.testForInteractiveCreateUseEdit(IntegrationTests) (0 ms)</li><li>IntegrationTests.testForInteractiveExportRecurringCheckData(IntegrationTests) (0 ms)</li><li>IntegrationTests.testForInteractiveModeEditCalendarTimezone(IntegrationTests) (0 ms)</li><li>IntegrationTests.testCalendarControllerCopyEventsBetweenDatesDifferentCalendarNoEvents(IntegrationTests) (0 ms)</li><li>IntegrationTests.testCalendarControllerCopyEventToAStartDateTime(IntegrationTests) (0 ms)</li><li>IntegrationTests.testCalendarControllerCopyEventToAStartDateTimeSameCalendar(IntegrationTests) (0 ms)</li><li>IntegrationTests.testCalendarControllerCopyEventsBetweenDatesDifferentCalendar2(IntegrationTests) (1 ms)</li><li>IntegrationTests.testCalendarControllerCopyEventsBetweenDatesDifferentCalendarConflictOneEvent(IntegrationTests) (1 ms)</li><li>IntegrationTests.testCalendarControllerCopyEventsOnADateSameCalendar(IntegrationTests) (0 ms)</li><li>IntegrationTests.testCalendarControllerCopyEventsBetweenDatesSameCalendar2(IntegrationTests) (1 ms)</li><li>IntegrationTests.testCalendarControllerCopyEventsOnADateDifferentCalendar(IntegrationTests) (1 ms)</li><li>IntegrationTests.testCalendarControllerCopyEventsBetweenDatesSameCalendarConflictMultipleEvent(IntegrationTests) (1 ms)</li><li>IntegrationTests.testCalendarControllerCopyEventsBetweenDatesDifferentCalendar(IntegrationTests) (4 ms)</li><li>IntegrationTests.testCalendarControllerCopyEventsBetweenDatesSameCalendar(IntegrationTests) (2 ms)</li>
+</ul>
+
+<br/>
+
+Report generated by <a href='https://pitest.org'>PIT</a> 1.17.2
+
+</body>
+</html>

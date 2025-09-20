@@ -1,0 +1,1247 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+
+
+<h1>SingleEvent.java</h1>
+
+<table class="src">
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@ba6907f_1'/>
+1
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@ba6907f_1'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>package model;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@ba6907f_2'/>
+2
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@ba6907f_2'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@ba6907f_3'/>
+3
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@ba6907f_3'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import java.time.LocalDate;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@ba6907f_4'/>
+4
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@ba6907f_4'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import java.time.LocalDateTime;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@ba6907f_5'/>
+5
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@ba6907f_5'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import java.time.LocalTime;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@ba6907f_6'/>
+6
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@ba6907f_6'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@ba6907f_7'/>
+7
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@ba6907f_7'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>/**</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@ba6907f_8'/>
+8
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@ba6907f_8'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * Represents a single, non-recurring event that extends the functionality of {@code AbstractEvent}.</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@ba6907f_9'/>
+9
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@ba6907f_9'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * This class is used for events that occur only once at a specific date and time.</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@ba6907f_10'/>
+10
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@ba6907f_10'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> */</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@ba6907f_11'/>
+11
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@ba6907f_11'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>public class SingleEvent extends AbstractEvent {</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@ba6907f_12'/>
+12
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@ba6907f_12'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@ba6907f_13'/>
+13
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@ba6907f_13'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  private SingleEvent(SingleEventBuilder eventBuilder) {</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@ba6907f_14'/>
+14
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@ba6907f_14'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    super(eventBuilder.getSubject(), eventBuilder.getStartDate(), eventBuilder.getStartTime(),</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@ba6907f_15'/>
+15
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@ba6907f_15'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>            eventBuilder.getEndDate(), eventBuilder.getEndTime(), eventBuilder.getDescription(),</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@ba6907f_16'/>
+16
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@ba6907f_16'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>            eventBuilder.getLocation(), eventBuilder.getIsPrivate());</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@ba6907f_17'/>
+17
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@ba6907f_17'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>  }</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@ba6907f_18'/>
+18
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@ba6907f_18'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@ba6907f_19'/>
+19
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@ba6907f_19'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  /**</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@ba6907f_20'/>
+20
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@ba6907f_20'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>   * A builder class for constructing instances of {@code SingleEvent}.</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@ba6907f_21'/>
+21
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@ba6907f_21'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>   * This class extends {@code EventBuilder} to provide a fluent API for setting up</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@ba6907f_22'/>
+22
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@ba6907f_22'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>   * a single, non-recurring event with properties such as subject, date, and time.</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@ba6907f_23'/>
+23
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@ba6907f_23'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>   */</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@ba6907f_24'/>
+24
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@ba6907f_24'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  public static class SingleEventBuilder extends EventBuilder&#60;SingleEventBuilder&#62; {</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@ba6907f_25'/>
+25
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@ba6907f_25'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@ba6907f_26'/>
+26
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@ba6907f_26'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    /**</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@ba6907f_27'/>
+27
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@ba6907f_27'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>     * Constructs a {@code SingleEventBuilder} with the specified subject,</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@ba6907f_28'/>
+28
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@ba6907f_28'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>     * start date, and start time.</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@ba6907f_29'/>
+29
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@ba6907f_29'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>     * This initializes the builder with the essential details required to create a single event.</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@ba6907f_30'/>
+30
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@ba6907f_30'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>     *</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@ba6907f_31'/>
+31
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@ba6907f_31'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>     * @param subject   the name of the event</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@ba6907f_32'/>
+32
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@ba6907f_32'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>     * @param startDate the date when the event occurs</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@ba6907f_33'/>
+33
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@ba6907f_33'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>     * @param startTime the time when the event starts</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@ba6907f_34'/>
+34
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@ba6907f_34'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>     */</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@ba6907f_35'/>
+35
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@ba6907f_35'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public SingleEventBuilder(String subject, LocalDate startDate, LocalTime startTime,</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@ba6907f_36'/>
+36
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@ba6907f_36'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>                              LocalDate endDate, LocalTime endTime) {</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@ba6907f_37'/>
+37
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@ba6907f_37'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>      super(subject, startDate, startTime, endDate, endTime);</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@ba6907f_38'/>
+38
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@ba6907f_38'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@ba6907f_39'/>
+39
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@ba6907f_39'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@ba6907f_40'/>
+40
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@ba6907f_40'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    @Override</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@ba6907f_41'/>
+41
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@ba6907f_41'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    SingleEventBuilder self() {</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@ba6907f_42'/>
+42
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@ba6907f_42'>1</a>
+<span>
+1. self : replaced return value with null for model/SingleEvent$SingleEventBuilder::self &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>      return this;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@ba6907f_43'/>
+43
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@ba6907f_43'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@ba6907f_44'/>
+44
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@ba6907f_44'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@ba6907f_45'/>
+45
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@ba6907f_45'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    @Override</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@ba6907f_46'/>
+46
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@ba6907f_46'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    AbstractEvent build() {</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@ba6907f_47'/>
+47
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@ba6907f_47'>1</a>
+<span>
+1. build : replaced return value with null for model/SingleEvent$SingleEventBuilder::build &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>      return new SingleEvent(this);</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@ba6907f_48'/>
+48
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@ba6907f_48'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@ba6907f_49'/>
+49
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@ba6907f_49'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  }</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@ba6907f_50'/>
+50
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@ba6907f_50'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@ba6907f_51'/>
+51
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@ba6907f_51'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  private SingleEventBuilder getBuilder() {</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@ba6907f_52'/>
+52
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@ba6907f_52'>1</a>
+<span>
+1. getBuilder : replaced return value with null for model/SingleEvent::getBuilder &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>    return new SingleEventBuilder(getSubject(), getStartDate(), getStartTime(),</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@ba6907f_53'/>
+53
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@ba6907f_53'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>            getEndDate(), getEndTime())</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@ba6907f_54'/>
+54
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@ba6907f_54'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>            .setDescription(getDescription())</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@ba6907f_55'/>
+55
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@ba6907f_55'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>            .setLocation(getLocation())</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@ba6907f_56'/>
+56
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@ba6907f_56'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>            .setPrivate(getIsPrivate());</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@ba6907f_57'/>
+57
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@ba6907f_57'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  }</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@ba6907f_58'/>
+58
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@ba6907f_58'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@ba6907f_59'/>
+59
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@ba6907f_59'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@ba6907f_60'/>
+60
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@ba6907f_60'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  @Override</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@ba6907f_61'/>
+61
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@ba6907f_61'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  SingleEventBuilder getEventCopy() {</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@ba6907f_62'/>
+62
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@ba6907f_62'>1</a>
+<span>
+1. getEventCopy : replaced return value with null for model/SingleEvent::getEventCopy &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>    return getBuilder();</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@ba6907f_63'/>
+63
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@ba6907f_63'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  }</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@ba6907f_64'/>
+64
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@ba6907f_64'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@ba6907f_65'/>
+65
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@ba6907f_65'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  @Override</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@ba6907f_66'/>
+66
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@ba6907f_66'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  SingleEventBuilder getEventCopy(LocalDateTime dateTime, boolean after) {</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@ba6907f_67'/>
+67
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@ba6907f_67'>2</a>
+<span>
+1. getEventCopy : negated conditional &rarr; KILLED<br/>
+2. getEventCopy : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>    if (after &#38;&#38; (dateTime.isBefore(LocalDateTime.of(getStartDate(), getStartTime()))</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@ba6907f_68'/>
+68
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@ba6907f_68'>1</a>
+<span>
+1. getEventCopy : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>            || dateTime.isEqual(LocalDateTime.of(getStartDate(), getStartTime())))) {</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@ba6907f_69'/>
+69
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@ba6907f_69'>1</a>
+<span>
+1. getEventCopy : replaced return value with null for model/SingleEvent::getEventCopy &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>      return getBuilder();</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@ba6907f_70'/>
+70
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@ba6907f_70'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@ba6907f_71'/>
+71
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@ba6907f_71'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    return null;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@ba6907f_72'/>
+72
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@ba6907f_72'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  }</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@ba6907f_73'/>
+73
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@ba6907f_73'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@ba6907f_74'/>
+74
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@ba6907f_74'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  @Override</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@ba6907f_75'/>
+75
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@ba6907f_75'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  EventBuilder getOneEvent(LocalDateTime startDateTime, LocalDateTime endDateTime) {</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@ba6907f_76'/>
+76
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@ba6907f_76'>1</a>
+<span>
+1. getOneEvent : replaced return value with null for model/SingleEvent::getOneEvent &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>    return getBuilder();</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@ba6907f_77'/>
+77
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@ba6907f_77'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  }</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@ba6907f_78'/>
+78
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@ba6907f_78'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>}</span></pre></td></tr>
+
+
+
+<tr><td></td><td></td><td><h2>Mutations</h2></td></tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@ba6907f_42'>42</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@ba6907f_42'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>self<br/><b>Killed by : </b>CalendarTest.printStartDateBeforeEndDate(CalendarTest)</span></span> replaced return value with null for model/SingleEvent$SingleEventBuilder::self &rarr; KILLED</span>
+</div> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@ba6907f_47'>47</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@ba6907f_47'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>build<br/><b>Killed by : </b>CalendarTest.printStartDateBeforeEndDate(CalendarTest)</span></span> replaced return value with null for model/SingleEvent$SingleEventBuilder::build &rarr; KILLED</span>
+</div> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@ba6907f_52'>52</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@ba6907f_52'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getBuilder<br/><b>Killed by : </b>CalendarTest.testEditSetTimeZoneSuccess(CalendarTest)</span></span> replaced return value with null for model/SingleEvent::getBuilder &rarr; KILLED</span>
+</div> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@ba6907f_62'>62</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@ba6907f_62'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getEventCopy<br/><b>Killed by : </b>CalendarTest.testEditSetTimeZoneSuccess(CalendarTest)</span></span> replaced return value with null for model/SingleEvent::getEventCopy &rarr; KILLED</span>
+</div> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@ba6907f_67'>67</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@ba6907f_67'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getEventCopy<br/><b>Killed by : </b>CalendarTest.testEditEventsDescriptionSingleAndRecurring(CalendarTest)</span></span> negated conditional &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>getEventCopy<br/><b>Killed by : </b>CalendarTest.testEditEventsDescriptionSingleAndRecurring(CalendarTest)</span></span> negated conditional &rarr; KILLED</span>
+</div> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@ba6907f_68'>68</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@ba6907f_68'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getEventCopy<br/><b>Killed by : </b>CalendarTest.testEditEventsDescriptionSingleAndRecurring(CalendarTest)</span></span> negated conditional &rarr; KILLED</span>
+</div> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@ba6907f_69'>69</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@ba6907f_69'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getEventCopy<br/><b>Killed by : </b>CalendarTest.testEditEventsDescriptionSingleAndRecurring(CalendarTest)</span></span> replaced return value with null for model/SingleEvent::getEventCopy &rarr; KILLED</span>
+</div> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@ba6907f_76'>76</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@ba6907f_76'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getOneEvent<br/><b>Killed by : </b>CalendarTest.testEditSingleEventSubject(CalendarTest)</span></span> replaced return value with null for model/SingleEvent::getOneEvent &rarr; KILLED</span>
+</div> 
+</td>
+</tr>
+
+</table>
+
+
+<h2>Active mutators</h2>
+<ul>
+<li class='mutator'>CONDITIONALS_BOUNDARY</li>
+<li class='mutator'>EMPTY_RETURNS</li>
+<li class='mutator'>FALSE_RETURNS</li>
+<li class='mutator'>INCREMENTS</li>
+<li class='mutator'>INVERT_NEGS</li>
+<li class='mutator'>MATH</li>
+<li class='mutator'>NEGATE_CONDITIONALS</li>
+<li class='mutator'>NULL_RETURNS</li>
+<li class='mutator'>PRIMITIVE_RETURNS</li>
+<li class='mutator'>TRUE_RETURNS</li>
+<li class='mutator'>VOID_METHOD_CALLS</li>
+
+</ul>
+
+<h2>Tests examined</h2>
+<ul>
+<li>CalendarTest.printStartDateBeforeEndDate(CalendarTest) (0 ms)</li><li>CalendarTest.showStatus1(CalendarTest) (0 ms)</li><li>CalendarTest.testCreateTwoSingleEventsConflicts(CalendarTest) (0 ms)</li><li>CalendarTest.testCreateTwoSingleEventsConflicts2(CalendarTest) (0 ms)</li><li>CalendarTest.showStatus2(CalendarTest) (0 ms)</li><li>CalendarTest.testExportEvents(CalendarTest) (0 ms)</li><li>CalendarTest.testCreateSingleEvent(CalendarTest) (0 ms)</li><li>CalendarTest.printEvents6(CalendarTest) (0 ms)</li><li>CalendarTest.printEvents3(CalendarTest) (0 ms)</li><li>CalendarTest.printEvents4(CalendarTest) (0 ms)</li><li>CalendarTest.testPrintEventsAllDayEventNotInRange(CalendarTest) (0 ms)</li><li>CalendarTest.testPrintEventsSameStartDateTime(CalendarTest) (0 ms)</li><li>CalendarTest.testEditSingleEventNotAvailableSubject(CalendarTest) (0 ms)</li><li>CalendarTest.printEvents2(CalendarTest) (1 ms)</li><li>CalendarTest.testCreateEventAutoDeclineTrueNoConflictAfterEvent(CalendarTest) (0 ms)</li><li>CalendarTest.testCreateEventAutoDeclineTrueConflictEndTimeSame(CalendarTest) (0 ms)</li><li>CalendarTest.testCreateEventAutoDeclineTrueNoConflict(CalendarTest) (0 ms)</li><li>CalendarTest.testEditSingleEventNotAvailableSubject2(CalendarTest) (0 ms)</li><li>CalendarTest.testEditSingleEventNotAvailableSubject3(CalendarTest) (0 ms)</li><li>CalendarTest.testCreateEventAutoDeclineTrueConflictAtStart(CalendarTest) (0 ms)</li><li>CalendarTest.testCreateEventAutoDeclineTrueConflictAtEnd(CalendarTest) (1 ms)</li><li>CalendarTest.testEditSetTimeZoneSuccess(CalendarTest) (0 ms)</li><li>GraphicalControllerTest.testCreateSingleEventFeature2(GraphicalControllerTest) (0 ms)</li><li>CalendarTest.testEditSingleEventSubject(CalendarTest) (0 ms)</li><li>CalendarTest.printSingleRecurringEventsWithinRange3(CalendarTest) (0 ms)</li><li>CalendarTest.showStatusForNullDate(CalendarTest) (0 ms)</li><li>GraphicalControllerTest.testExportDataSuccess(GraphicalControllerTest) (4 ms)</li><li>CalendarTest.showStatusForSingleEvent(CalendarTest) (0 ms)</li><li>GraphicalControllerTest.testUseCalendarSuccess(GraphicalControllerTest) (0 ms)</li><li>GraphicalControllerTest.testCreateCalendarSuccess(GraphicalControllerTest) (0 ms)</li><li>CalendarTest.showStatusRecurringEvent11(CalendarTest) (0 ms)</li><li>CalendarTest.showStatusRecurringEvent8(CalendarTest) (0 ms)</li><li>CalendarTest.showStatusInRecurringEvent(CalendarTest) (0 ms)</li><li>IntegrationTests.testForHeadlessModeCreateSuccessfulEvent(IntegrationTests) (0 ms)</li><li>CalendarTest.showStatusRecurringEvent6(CalendarTest) (0 ms)</li><li>CalendarTest.showStatusRecurringEvent3(CalendarTest) (0 ms)</li><li>CalendarTest.showStatusRecurringEvent10(CalendarTest) (0 ms)</li><li>CalendarTest.showStatusInRecurringEvent2(CalendarTest) (0 ms)</li><li>IntegrationTests.testForInteractiveModeCreateSuccessfulEvent(IntegrationTests) (0 ms)</li><li>CalendarTest.showStatusRecurringEvent7(CalendarTest) (0 ms)</li><li>CalendarTest.testCreateRecurringEventWithMultipleOccurrencesThreeDaysOfWeek(CalendarTest) (0 ms)</li><li>CalendarTest.showStatusRecurringEvent9(CalendarTest) (0 ms)</li><li>CalendarTest.testCreateRecurringEventWithTwoOccurrencesThreeDaysOfWeek(CalendarTest) (0 ms)</li><li>CalendarTest.showStatusRecurringEvent5(CalendarTest) (0 ms)</li><li>CalendarTest.testsPrintEventForRecurringEventWithinRange5(CalendarTest) (0 ms)</li><li>CalendarTest.testCreateRecurringEventWithMultipleOccurrencesConflictWithSingleEvent(CalendarTest) (0 ms)</li><li>CalendarTest.testExportRecurringEvents(CalendarTest) (0 ms)</li><li>CalendarTest.testCreateRecurringEventWithSpecificEndTimeBeforeEndTime(CalendarTest) (0 ms)</li><li>GraphicalControllerTest.testEditSingleEventFeature2(GraphicalControllerTest) (0 ms)</li><li>CalendarTest.testCreateRecurringEventWithSpecificEndDate(CalendarTest) (0 ms)</li><li>CalendarTest.testCreateRecurringEventWithConflictWithRecurringEvent(CalendarTest) (1 ms)</li><li>CalendarTest.testEditRecurringEventNotAvailableSubject(CalendarTest) (0 ms)</li><li>IntegrationTests.testForInteractiveModeShowStatus(IntegrationTests) (0 ms)</li><li>IntegrationTests.testForHeadlessModeShowStatus(IntegrationTests) (0 ms)</li><li>CalendarTest.testCreateSingleEventWithConflictWithRecurringEventEndTimeSame(CalendarTest) (0 ms)</li><li>CalendarTest.testCreateSingleEventWithConflictWithRecurringEventAtStart(CalendarTest) (0 ms)</li><li>CalendarTest.testCreateSingleEventWithConflictWithRecurringEvent(CalendarTest) (0 ms)</li><li>CalendarTest.testEditRecurringEventNotAvailableSubject3(CalendarTest) (0 ms)</li><li>GraphicalControllerTest.testImportWithoutPrivate(GraphicalControllerTest) (0 ms)</li><li>GraphicalControllerTest.testImportWithLocation(GraphicalControllerTest) (0 ms)</li><li>GraphicalControllerTest.testImportWithDescription(GraphicalControllerTest) (0 ms)</li><li>GraphicalControllerTest.testImportWithoutAllDayEvent(GraphicalControllerTest) (0 ms)</li><li>GraphicalControllerTest.testImportWithPrivateTrue(GraphicalControllerTest) (0 ms)</li><li>CalendarTest.testEditRecurringEventNotAvailableSubject2(CalendarTest) (0 ms)</li><li>GraphicalControllerTest.testImportSuccess(GraphicalControllerTest) (0 ms)</li><li>CalendarTest.testEditEventEndTimeBeforeStartTime(CalendarTest) (0 ms)</li><li>CalendarTest.printSingleRecurringEventsWithinRange2(CalendarTest) (0 ms)</li><li>CalendarTest.printSingleRecurringEventsWithinRange4(CalendarTest) (0 ms)</li><li>GraphicalControllerTest.testCreateRecurringEventWithOccurrencesFeature2(GraphicalControllerTest) (0 ms)</li><li>IntegrationTests.testForHeadlessModeEditEvent(IntegrationTests) (0 ms)</li><li>CalendarTest.testEditEventsFromStartEndTimeBeforeStartTime(CalendarTest) (0 ms)</li><li>IntegrationTests.testForInteractiveExportCheckData(IntegrationTests) (0 ms)</li><li>IntegrationTests.testForInteractiveModeEditEvent(IntegrationTests) (0 ms)</li><li>CalendarTest.testEditSetTimeZoneRecurringEventWithOccurrences(CalendarTest) (0 ms)</li><li>CalendarTest.testEditEventsFromStartEndDateToPreviousDate(CalendarTest) (0 ms)</li><li>IntegrationTests.testForInteractiveExportAllDayEvents(IntegrationTests) (0 ms)</li><li>CalendarTest.testEditEventEndDateToPreviousDate(CalendarTest) (1 ms)</li><li>IntegrationTests.testForHeadlessModeExport(IntegrationTests) (0 ms)</li><li>GraphicalControllerTest.testCreateRecurringEventWithSpecificEndDateFeature2(GraphicalControllerTest) (0 ms)</li><li>CalendarTest.testEditEventsFromStartEndDateToFutureDate(CalendarTest) (0 ms)</li><li>CalendarTest.testEditEventsFromStartOccurrences(CalendarTest) (0 ms)</li><li>CalendarTest.testEditEventsFromStartDescription(CalendarTest) (0 ms)</li><li>CalendarTest.testEditEventsFromStartIsPrivate(CalendarTest) (0 ms)</li><li>CalendarTest.testEditEventsFromStartSubject(CalendarTest) (0 ms)</li><li>CalendarTest.printSingleRecurringEventsWithinRange(CalendarTest) (5 ms)</li><li>CalendarTest.testEditEventsFromStartLocation(CalendarTest) (0 ms)</li><li>CalendarTest.testEditEventsFromStartStartTime(CalendarTest) (0 ms)</li><li>CalendarTest.testEditEventsFromStartStartDateToAPreviousDateFromSpecificStartDateTime(CalendarTest) (0 ms)</li><li>CalendarTest.testEditEventsFromStartStartDateToAPreviousDateFromStartDateTime(CalendarTest) (0 ms)</li><li>CalendarTest.testEditEventsFromStartDaysOfWeek(CalendarTest) (0 ms)</li><li>CalendarTest.testEditEventsFromStartEndTimeToFutureTime(CalendarTest) (0 ms)</li><li>CalendarTest.testEditEventsFromStartSetSpecificEndTime(CalendarTest) (0 ms)</li><li>CalendarTest.testEditEventsFromStartSetSpecificEndDate(CalendarTest) (0 ms)</li><li>CalendarTest.testEditEventsEndTimeBeforeStartTime2(CalendarTest) (0 ms)</li><li>CalendarTest.testEditEventsStartDateToAPreviousDateFromStartDateTime2(CalendarTest) (0 ms)</li><li>CalendarTest.testEditEventsWrongPropertyName(CalendarTest) (0 ms)</li><li>CalendarTest.testEditEventsSetSpecificEndTime2(CalendarTest) (0 ms)</li><li>CalendarTest.testEditEventsEndDateToPreviousDate2(CalendarTest) (1 ms)</li><li>CalendarTest.testEditEventsEndDateToFutureDate2(CalendarTest) (0 ms)</li><li>CalendarTest.testEditEventsEndDateToPreviousDate(CalendarTest) (0 ms)</li><li>CalendarTest.testEditEventsEndTimeBeforeStartTime(CalendarTest) (0 ms)</li><li>CalendarTest.testEditEventEndTimeToFutureTime(CalendarTest) (0 ms)</li><li>CalendarTest.testEditEventDescription(CalendarTest) (0 ms)</li><li>CalendarTest.testEditEventStartDateToAPreviousDateFromStartDateTime(CalendarTest) (0 ms)</li><li>CalendarTest.testEditEventSubject(CalendarTest) (0 ms)</li><li>CalendarTest.testEditEventLocation(CalendarTest) (0 ms)</li><li>CalendarTest.testEditEventStartTime(CalendarTest) (0 ms)</li><li>GraphicalControllerTest.testEditMultipleEventsAllWithSubjectFeature2(GraphicalControllerTest) (0 ms)</li><li>CalendarTest.testEditEventEndDateToFutureDate(CalendarTest) (0 ms)</li><li>CalendarTest.testEditEventIsPrivate(CalendarTest) (0 ms)</li><li>CalendarTest.testEditEventStartDateToAPreviousDateFromSpecificStartDateTime(CalendarTest) (0 ms)</li><li>CalendarTest.testEditEventsStartDateToAPreviousDateFromStartDateTime(CalendarTest) (0 ms)</li><li>CalendarTest.testEditEventStartTimeToEndOfDay(CalendarTest) (0 ms)</li><li>CalendarTest.testEditEventsEndDateToFutureDate3(CalendarTest) (0 ms)</li><li>CalendarTest.testEditEventsDescription2(CalendarTest) (0 ms)</li><li>CalendarTest.testEditEventsEndDateToFutureDate(CalendarTest) (0 ms)</li><li>CalendarTest.testEditEventsLocation2(CalendarTest) (0 ms)</li><li>IntegrationTests.testForInteractiveModePrintSingleEvent(IntegrationTests) (0 ms)</li><li>CalendarTest.testEditIsPrivate2(CalendarTest) (0 ms)</li><li>CalendarTest.testEditEventsOccurrences2(CalendarTest) (0 ms)</li><li>CalendarTest.testEditEventsSubject2(CalendarTest) (0 ms)</li><li>IntegrationTests.testForHeadlessModePrintSingleEvent(IntegrationTests) (0 ms)</li><li>CalendarTest.testEditEventsDaysOfWeek2(CalendarTest) (0 ms)</li><li>CalendarTest.testEditEventsStartDateToAPreviousDateFromSpecificStartDateTime2(CalendarTest) (0 ms)</li><li>CalendarTest.testEditSetTimeZoneRecurringEventSuccessSpecificEndDateTime(CalendarTest) (3 ms)</li><li>CalendarTest.testEditEventsStartTime2(CalendarTest) (0 ms)</li><li>CalendarTest.testEditEventsEndTimeToFutureTime2(CalendarTest) (0 ms)</li><li>IntegrationTests.testForInteractiveCreateUseEdit(IntegrationTests) (0 ms)</li><li>CalendarTest.testEditEventsSetSpecificEndDate2(CalendarTest) (0 ms)</li><li>CalendarTest.testEditEventsLocation(CalendarTest) (0 ms)</li><li>CalendarTest.testEditEventsDescription(CalendarTest) (0 ms)</li><li>CalendarTest.testEditEventsSubject(CalendarTest) (1 ms)</li><li>CalendarTest.testEditEventStartTimeToEndOfDay2(CalendarTest) (1 ms)</li><li>IntegrationTests.testForInteractiveExportRecurringCheckData(IntegrationTests) (0 ms)</li><li>CalendarTest.testEditIsPrivate(CalendarTest) (0 ms)</li><li>CalendarTest.testEditEventsOccurrences(CalendarTest) (0 ms)</li><li>CalendarTest.testEditEventsSetSpecificEndDate(CalendarTest) (0 ms)</li><li>CalendarTest.testEditEventsStartDateToAPreviousDateFromSpecificStartDateTime(CalendarTest) (0 ms)</li><li>CalendarTest.testEditEventsEndTimeToFutureTime(CalendarTest) (0 ms)</li><li>CalendarTest.testEditEventsStartTime(CalendarTest) (0 ms)</li><li>CalendarTest.testEditEventsDaysOfWeek(CalendarTest) (1 ms)</li><li>CalendarTest.testEditEventsSetSpecificEndTime(CalendarTest) (0 ms)</li><li>CalendarTest.testEditEventsTwice(CalendarTest) (0 ms)</li><li>GraphicalControllerTest.testEditMultipleEventsAfterSpecifiedDateFeature2(GraphicalControllerTest) (0 ms)</li><li>CalendarTest.testEditEventsDescriptionSingleAndRecurring(CalendarTest) (0 ms)</li><li>IntegrationTests.testForInteractiveModeEditCalendarTimezone(IntegrationTests) (0 ms)</li><li>IntegrationTests.testCalendarControllerCopyEventsBetweenDatesDifferentCalendarNoEvents(IntegrationTests) (0 ms)</li><li>IntegrationTests.testCalendarControllerCopyEventToAStartDateTime(IntegrationTests) (0 ms)</li><li>IntegrationTests.testCalendarControllerCopyEventToAStartDateTimeSameCalendar(IntegrationTests) (0 ms)</li><li>IntegrationTests.testCalendarControllerCopyEventsBetweenDatesDifferentCalendar2(IntegrationTests) (1 ms)</li><li>IntegrationTests.testCalendarControllerCopyEventsBetweenDatesDifferentCalendarConflictOneEvent(IntegrationTests) (1 ms)</li><li>IntegrationTests.testCalendarControllerCopyEventsOnADateSameCalendar(IntegrationTests) (0 ms)</li><li>IntegrationTests.testCalendarControllerCopyEventsBetweenDatesSameCalendar2(IntegrationTests) (1 ms)</li><li>IntegrationTests.testCalendarControllerCopyEventsOnADateDifferentCalendar(IntegrationTests) (1 ms)</li><li>IntegrationTests.testCalendarControllerCopyEventsBetweenDatesSameCalendarConflictMultipleEvent(IntegrationTests) (1 ms)</li><li>IntegrationTests.testCalendarControllerCopyEventsBetweenDatesDifferentCalendar(IntegrationTests) (4 ms)</li><li>IntegrationTests.testCalendarControllerCopyEventsBetweenDatesSameCalendar(IntegrationTests) (2 ms)</li>
+</ul>
+
+<br/>
+
+Report generated by <a href='https://pitest.org'>PIT</a> 1.17.2
+
+</body>
+</html>
