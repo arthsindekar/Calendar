@@ -1,5 +1,5 @@
 # Use official OpenJDK 17 image
-FROM openjdk:17-jdk-slim
+FROM openjdk:17-jdk
 
 # Create app directory
 WORKDIR /app
