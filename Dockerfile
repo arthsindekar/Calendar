@@ -8,5 +8,7 @@ WORKDIR /app
 # Copy the JAR built Maven workflow
 COPY out/artifacts/Assignment6_jar/Assignment6.jar app.jar
 
+COPY res/ValidCommands.txt commands.txt
+
 # Run the JAR
-CMD ["java", "-jar", "app.jar", "--mode", "interactive"]
+CMD ["java", "-jar", "app.jar", "--mode", "headless", "commands.txt"]
