@@ -9,4 +9,4 @@ WORKDIR /app
 COPY out/artifacts/Assignment6_jar/Assignment6.jar app.jar
 
 # Run the JAR
-CMD ["java", "-jar", "app.jar"]
+CMD ["java", "-jar", "app.jar", "--mode", "interactive"]
