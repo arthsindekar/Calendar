@@ -36,6 +36,7 @@
                         <param>XML</param>
                         <param>HTML</param>
                     </outputFormats>
+                    <timestampedReports>false</timestampedReports>     
                 </configuration>
             </plugin>
         </plugins>
