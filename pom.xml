@@ -31,12 +31,15 @@
                 <version>1.17.2</version>
                 <configuration>
                     <targetClasses>
-                        <param>*</param> <!-- all classes in default package -->
+                      <param>controller.*</param>
+                      <param>model.*</param>
+                      <param>CalendarApp*</param>
                     </targetClasses>
+
                     <targetTests>
                         <param>*</param> <!-- all tests in default package -->
                     </targetTests>
-                    <excludedClasses>view.*</excludedClasses> <!-- optional -->
+                    <excludedClasses>view.*</excludedClasses> 
                     <outputFormats>
                         <param>XML</param>
                         <param>HTML</param>
