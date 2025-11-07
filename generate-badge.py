@@ -1,10 +1,18 @@
 import xml.etree.ElementTree as ET
 import json
 import glob
+import sys
+import os
 
-# Find the latest PIT XML
+# Find all timestamped PIT XMLs
 xml_files = glob.glob("target/pit-reports/*/mutations.xml")
-xml_file = max(xml_files, key=lambda f: f)  # latest
+
+if not xml_files:
+    print("Error: No PIT XML report found")
+    sys.exit(1)
+
+# pick the latest folder
+xml_file = max(xml_files, key=os.path.getctime)
 
 tree = ET.parse(xml_file)
 root = tree.getroot()
@@ -20,5 +28,6 @@ badge = {
     "color": "brightgreen" if score >= 90 else "yellow" if score >= 70 else "red"
 }
 
+os.makedirs("badges", exist_ok=True)
 with open("badges/mutation-badge.json", "w") as f:
     json.dump(badge, f)
