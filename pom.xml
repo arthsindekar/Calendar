@@ -32,6 +32,10 @@
                     <targetTests>
                         <param>*</param>
                     </targetTests>
+                    <outputFormats>
+                        <param>XML</param>
+                        <param>HTML</param>
+                    </outputFormats>
                 </configuration>
             </plugin>
         </plugins>
