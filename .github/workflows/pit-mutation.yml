@@ -31,3 +31,16 @@ jobs:
         with:
           name: pit-report
           path: target/pit-reports/
+
+      - name: Create badges folder
+        run: mkdir -p badges
+
+      - name: Generate mutation badge
+        run: python3 generate-badge.py
+
+      - name: Commit badge to gh-pages
+        uses: peaceiris/actions-gh-pages@v6
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./badges
+
