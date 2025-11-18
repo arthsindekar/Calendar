@@ -2,6 +2,7 @@
 
 Java Swing desktop calendar application with unit and mutation testing.
 
-![Mutation Score](https://img.shields.io/endpoint?url=https://arthsindekar.github.io/Calendar/mutation-badge.json)
+![Mutation Score: 100%](https://img.shields.io/badge/mutation--score-100%25-brightgreen)
+
 
 
